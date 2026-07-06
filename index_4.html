@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NatureExpert Ayurvedic Pvt. Ltd. — Formulated Different</title>
+  <meta name="description" content="India's premier Ayurvedic contract manufacturer. Ministry of Ayush licensed. 40+ years of formulation expertise." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #080808;
+      --surface: #111111;
+      --surface2: #1A1A1A;
+      --border: rgba(255,255,255,0.08);
+      --acid: #AAFF00;
+      --acid-dim: rgba(170,255,0,0.12);
+      --acid-mid: rgba(170,255,0,0.4);
+      --white: #F0EDE6;
+      --muted: rgba(240,237,230,0.5);
+      --font-display: 'Space Grotesk', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      max-width: 100%;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.65;
+      overflow-x: hidden;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5vw;
+      height: 64px;
+      background: rgba(8,8,8,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      max-width: 100vw;
+      box-sizing: border-box;
+    }
+
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--white);
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--acid); }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+      padding: 4px 0;
+      display: block;
+    }
+    .nav-links a:hover { color: var(--white); }
+
+    .nav-cta {
+      font-size: 13px;
+      font-weight: 600;
+      font-family: var(--font-display);
+      background: var(--acid);
+      color: #080808;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.15s;
+    }
+    .nav-cta:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    .nav-mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--white);
+      cursor: pointer;
+      font-size: 22px;
+    }
+
+    /* ── TICKER ── */
+    .ticker-wrap {
+      position: relative;
+      overflow: hidden;
+      clip: rect(0, auto, auto, 0);
+      background: var(--acid);
+      padding: 10px 0;
+      width: 100%;
+      contain: layout style paint;
+    }
+    .ticker-track {
+      display: flex;
+      gap: 0;
+      animation: ticker 28s linear infinite;
+      width: max-content;
+      will-change: transform;
+    }
+    .ticker-item {
+      font-family: var(--font-display);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #080808;
+      padding: 0 36px;
+      white-space: nowrap;
+    }
+    .ticker-dot {
+      color: rgba(8,8,8,0.35);
+      padding: 0;
+    }
+    @keyframes ticker {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 100px 5vw 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -200px; right: -200px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(170,255,0,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-eyebrow {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--acid);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 32px;
+      height: 1px;
+      background: var(--acid);
+    }
+
+    .hero-headline {
+      font-family: var(--font-display);
+      font-size: clamp(48px, 8vw, 112px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 0.95;
+      max-width: 900px;
+      margin-bottom: 32px;
+    }
+    .hero-headline .hl { color: var(--acid); }
+
+    .hero-sub {
+      font-size: clamp(16px, 2vw, 20px);
+      color: var(--muted);
+      max-width: 520px;
+      line-height: 1.7;
+      margin-bottom: 48px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 700;
+      background: var(--acid);
+      color: #080808;
+      border: none;
+      padding: 14px 32px;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary:hover { opacity: 0.88; transform: translateY(-2px); }
+
+    .btn-outline {
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 600;
+      background: transparent;
+      color: var(--white);
+      border: 1px solid var(--border);
+      padding: 14px 32px;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-outline:hover { border-color: rgba(240,237,230,0.4); color: var(--white); }
+
+    .hero-stats {
+      display: flex;
+      gap: 48px;
+      margin-top: 80px;
+      padding-top: 48px;
+      border-top: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+    .hero-stat-num {
+      font-family: var(--font-display);
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--white);
+      line-height: 1;
+    }
+    .hero-stat-num span { color: var(--acid); }
+    .hero-stat-label {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 6px;
+      letter-spacing: 0.02em;
+    }
+
+    /* ── SECTION SHARED ── */
+    section {
+      padding: 100px 5vw;
+    }
+
+    .section-tag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--acid);
+      margin-bottom: 16px;
+    }
+
+    .section-heading {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 5vw, 60px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .section-body {
+      font-size: 17px;
+      color: var(--muted);
+      max-width: 620px;
+      line-height: 1.75;
+    }
+
+    /* ── DIFFERENTIATORS ── */
+    .diff-section {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .diff-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-top: 64px;
+    }
+
+    .diff-card {
+      background: var(--surface);
+      padding: 40px 36px;
+      transition: background 0.2s;
+    }
+    .diff-card:hover { background: var(--surface2); }
+
+    .diff-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--acid-dim);
+      border: 1px solid var(--acid-mid);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+
+    .diff-title {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      letter-spacing: -0.01em;
+    }
+
+    .diff-text {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* ── MANUFACTURING GALLERY ── */
+    .gallery-section { background: var(--black); }
+
+    .gallery-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 48px;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: auto;
+      gap: 12px;
+    }
+
+    .gallery-item {
+      background: var(--surface);
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid var(--border);
+      aspect-ratio: 4/3;
+    }
+
+    .gallery-item.large {
+      grid-column: span 7;
+      grid-row: span 2;
+      aspect-ratio: unset;
+      min-height: 420px;
+    }
+    .gallery-item.tall {
+      grid-column: span 5;
+      grid-row: span 1;
+    }
+    .gallery-item.wide {
+      grid-column: span 5;
+    }
+    .gallery-item.small {
+      grid-column: span 4;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .gallery-item:hover img { transform: scale(1.04); }
+
+    .gallery-placeholder {
+      width: 100%;
+      height: 100%;
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: var(--surface2);
+      color: var(--muted);
+      font-size: 13px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .gallery-placeholder:hover { background: rgba(170,255,0,0.04); }
+
+    .gallery-placeholder svg {
+      width: 32px;
+      height: 32px;
+      opacity: 0.3;
+    }
+
+    .gallery-label {
+      position: absolute;
+      bottom: 12px; left: 12px;
+      background: rgba(8,8,8,0.8);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 5px 10px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .gallery-upload-note {
+      margin-top: 24px;
+      font-size: 13px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* ── ABOUT ── */
+    .about-section {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      margin-top: 64px;
+    }
+
+    .about-photo {
+      aspect-ratio: 4/5;
+      border-radius: 16px;
+      overflow: hidden;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      position: relative;
+    }
+
+    .about-photo img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+
+    .about-photo-placeholder {
+      width: 100%; height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 13px;
+      min-height: 400px;
+    }
+
+    .about-content { }
+
+    .about-quote {
+      font-family: var(--font-display);
+      font-size: clamp(20px, 3vw, 28px);
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+      color: var(--white);
+    }
+    .about-quote .hl { color: var(--acid); }
+
+    .about-text {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .about-badges {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+
+    .badge {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 6px 14px;
+      color: var(--muted);
+      background: var(--surface2);
+    }
+    .badge.green {
+      border-color: var(--acid-mid);
+      color: var(--acid);
+      background: var(--acid-dim);
+    }
+
+    /* ── LICENSES ── */
+    .licenses-section { background: var(--black); }
+
+    .licenses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 48px;
+    }
+
+    .license-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: border-color 0.2s, background 0.2s;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+    .license-card:hover {
+      border-color: var(--acid-mid);
+      background: var(--surface2);
+    }
+
+    .license-card-icon {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      background: var(--acid-dim);
+      border: 1px solid var(--acid-mid);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .license-card-icon svg {
+      width: 22px; height: 22px;
+      color: var(--acid);
+    }
+
+    .license-name {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .license-issuer {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .license-tag {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 100px;
+      background: var(--acid-dim);
+      color: var(--acid);
+      width: fit-content;
+      border: 1px solid var(--acid-mid);
+    }
+
+    .license-upload-area {
+      border: 1.5px dashed var(--border);
+      border-radius: 14px;
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+      text-align: center;
+    }
+    .license-upload-area:hover {
+      border-color: var(--acid-mid);
+      background: var(--acid-dim);
+    }
+
+    .license-upload-area svg {
+      width: 28px; height: 28px;
+      color: var(--muted);
+    }
+
+    .license-upload-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    /* ── CONTACT ── */
+    .contact-section {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      margin-top: 64px;
+      align-items: flex-start;
+    }
+
+    .contact-info { }
+
+    .contact-detail {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      margin-top: 36px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .contact-item-icon {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      background: var(--acid-dim);
+      border: 1px solid var(--acid-mid);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-item-icon svg { width: 18px; height: 18px; color: var(--acid); }
+
+    .contact-item-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .contact-item-value {
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--white);
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    input, textarea, select {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: var(--white);
+      outline: none;
+      transition: border-color 0.2s;
+      resize: vertical;
+      -webkit-appearance: none;
+    }
+
+    input::placeholder, textarea::placeholder { color: rgba(240,237,230,0.25); }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: var(--acid-mid);
+      box-shadow: 0 0 0 3px rgba(170,255,0,0.06);
+    }
+
+    select option { background: #1A1A1A; color: var(--white); }
+
+    textarea { min-height: 120px; }
+
+    .form-submit {
+      margin-top: 8px;
+    }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 24px;
+      background: var(--acid-dim);
+      border: 1px solid var(--acid-mid);
+      border-radius: 10px;
+      color: var(--acid);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--black);
+      border-top: 1px solid var(--border);
+      padding: 48px 5vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand {
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .footer-brand span { color: var(--acid); }
+
+    .footer-copy {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+    .footer-links a {
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .footer-links a:hover { color: var(--white); }
+
+    /* ── RESPONSIVE — tablet ── */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 64px; left: 0; right: 0;
+        background: rgba(8,8,8,0.97);
+        backdrop-filter: blur(12px);
+        padding: 24px 5vw 32px;
+        border-bottom: 1px solid var(--border);
+        gap: 20px;
+        z-index: 99;
+      }
+      .nav-mobile-toggle { display: block; }
+      .about-grid { grid-template-columns: 1fr; gap: 32px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 36px; }
+      .gallery-item.large { grid-column: span 12; min-height: 260px; aspect-ratio: 16/9; }
+      .gallery-item.tall  { grid-column: span 6; }
+      .gallery-item.wide  { grid-column: span 6; }
+      .gallery-item.small { grid-column: span 4; }
+      .hero-stats { gap: 28px; }
+      .form-row { grid-template-columns: 1fr; }
+      .gallery-header { flex-direction: column; align-items: flex-start; }
+    }
+
+    /* ── RESPONSIVE — mobile ── */
+    @media (max-width: 600px) {
+      /* Nav */
+      .nav-cta { display: none; }
+      .nav-logo { font-size: 13px; }
+
+      /* Global section spacing */
+      section { padding: 48px 20px; }
+
+      /* ── HERO: no justify-center, tight top pad, content flows naturally ── */
+      .hero {
+        min-height: unset;
+        padding: 24px 20px 44px;
+        justify-content: flex-start;
+      }
+      /* Kill the giant decorative glow — causes blank space on mobile */
+      .hero::before { display: none; }
+
+      .hero-eyebrow {
+        font-size: 10px;
+        letter-spacing: 0.1em;
+        margin-bottom: 14px;
+        /* Prevent "PUNE, INDIA" breaking onto a 3rd line */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+      }
+      .hero-eyebrow::before { width: 20px; flex-shrink: 0; }
+
+      .hero-headline {
+        font-size: 36px;
+        line-height: 1.05;
+        margin-bottom: 16px;
+      }
+      .hero-sub {
+        font-size: 15px;
+        line-height: 1.65;
+        margin-bottom: 24px;
+      }
+      .hero-actions {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .hero-actions .btn-primary,
+      .hero-actions .btn-outline {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 20px;
+        font-size: 15px;
+      }
+      /* Stats: 2x2 grid, tight spacing, all visible above fold */
+      .hero-stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px 12px;
+        margin-top: 28px;
+        padding-top: 24px;
+      }
+      .hero-stat-num { font-size: 30px; }
+      .hero-stat-label { font-size: 11px; margin-top: 4px; }
+
+      /* Section headings */
+      .section-heading { font-size: 28px; line-height: 1.1; }
+      .section-body { font-size: 15px; }
+
+      /* Why Us cards — tighter */
+      .diff-grid { margin-top: 28px; border-radius: 12px; }
+      .diff-card { padding: 22px 18px; }
+      .diff-icon { width: 38px; height: 38px; margin-bottom: 14px; }
+      .diff-title { font-size: 15px; margin-bottom: 8px; }
+      .diff-text { font-size: 13px; line-height: 1.6; }
+
+      /* Gallery — 2-col, no orphan: large spans full, pairs below */
+      .gallery-header { margin-bottom: 20px; }
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+      .gallery-item { border-radius: 10px; }
+      .gallery-item.large {
+        grid-column: span 2;
+        min-height: 180px;
+        aspect-ratio: 16/9;
+      }
+      .gallery-item.tall,
+      .gallery-item.wide,
+      .gallery-item.small {
+        grid-column: span 1;
+        min-height: 120px;
+        aspect-ratio: unset;
+      }
+      .gallery-placeholder { min-height: 120px; gap: 6px; font-size: 11px; }
+      .gallery-placeholder svg { width: 20px; height: 20px; }
+      .gallery-upload-note { font-size: 12px; margin-top: 16px; }
+
+      /* About — text-first on mobile: reorder photo below text */
+      .about-grid { display: flex; flex-direction: column; gap: 24px; }
+      .about-content { order: 1; }
+      .about-photo {
+        order: 2;
+        aspect-ratio: 4/3;
+        border-radius: 12px;
+      }
+      .about-photo-placeholder { min-height: 180px; }
+      .about-quote { font-size: 21px; line-height: 1.3; margin-bottom: 16px; }
+      .about-text { font-size: 14px; margin-bottom: 12px; }
+      .about-badges { gap: 7px; margin-top: 20px; }
+      .badge { font-size: 10px; padding: 5px 10px; }
+
+      /* Licenses — single column */
+      .licenses-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-top: 28px;
+      }
+      .license-card { padding: 18px 16px; gap: 12px; }
+      .license-card-icon { width: 40px; height: 40px; border-radius: 10px; }
+      .license-name { font-size: 14px; }
+      .license-issuer { font-size: 12px; }
+
+      /* Contact — stack info then form, compact */
+      .contact-detail { gap: 16px; margin-top: 20px; }
+      .contact-item-icon { width: 36px; height: 36px; }
+      .contact-item-value { font-size: 13px; word-break: break-all; }
+      .contact-item-label { font-size: 10px; }
+
+      /* Form — 16px prevents iOS auto-zoom on focus */
+      input, textarea, select { font-size: 16px !important; padding: 12px 13px; }
+      label { font-size: 11px; }
+      textarea { min-height: 100px; }
+      .btn-primary { font-size: 15px; padding: 14px 20px; }
+
+      /* Footer */
+      footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 32px 20px;
+        gap: 16px;
+      }
+      .footer-links { flex-wrap: wrap; gap: 10px 16px; }
+      .footer-links a { font-size: 12px; }
+      .footer-copy { font-size: 11px; }
+    }
+
+    /* ── Very small phones (≤380px) ── */
+    @media (max-width: 380px) {
+      .hero-headline { font-size: 30px; }
+      .hero-eyebrow { font-size: 9px; }
+      .section-heading { font-size: 24px; }
+      .hero-stat-num { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="nav-logo">NatureExpert <span>Ayurvedic</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#difference">Why Us</a></li>
+    <li><a href="#facility">Facility</a></li>
+    <li><a href="#licenses">Licenses</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li style="margin-top: 8px;"><a href="#contact" class="btn-primary" style="display:inline-flex; font-size:14px;">Work With Us →</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta" id="navDesktopCta">Work With Us →</a>
+  <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Toggle menu">☰</button>
+</nav>
+
+<!-- TICKER -->
+<div class="ticker-wrap" style="margin-top: 64px;">
+  <div class="ticker-track" id="ticker">
+    <span class="ticker-item">Ministry of Ayush Licensed</span>
+    <span class="ticker-item ticker-dot">✦</span>
+    <span class="ticker-item">40+ Years Formulation Expertise</span>
+    <span class="ticker-item ticker-dot">✦</span>
+    <span class="ticker-item">ISO Certified Manufacturing</span>
+    <span class="ticker-item ticker-dot">✦</span>
+    <span class="ticker-item">Skincare · Haircare · Body Care</span>
+    <span class="ticker-item ticker-dot">✦</span>
+    <span class="ticker-item">100% Ayurvedic Formulations</span>
+    <span class="ticker-item ticker-dot">✦</span>
+    <span class="ticker-item">Contract Manufacturing</span>
+    <span class="ticker-item ticker-dot">✦</span>
+    <span class="ticker-item">Private Label Ready</span>
+    <span class="ticker-item ticker-dot">✦</span>
+    <span class="ticker-item">Ministry of Ayush Licensed</span>
+    <span class="ticker-item ticker-dot">✦</span>
+    <span class="ticker-item">40+ Years Formulation Expertise</span>
+    <span class="ticker-item ticker-dot">✦</span>
+    <span class="ticker-item">ISO Certified Manufacturing</span>
+    <span class="ticker-item ticker-dot">✦</span>
+    <span class="ticker-item">Skincare · Haircare · Body Care</span>
+    <span class="ticker-item ticker-dot">✦</span>
+    <span class="ticker-item">100% Ayurvedic Formulations</span>
+    <span class="ticker-item ticker-dot">✦</span>
+    <span class="ticker-item">Contract Manufacturing</span>
+    <span class="ticker-item ticker-dot">✦</span>
+    <span class="ticker-item">Private Label Ready</span>
+    <span class="ticker-item ticker-dot">✦</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-eyebrow">Ayurvedic Contract Manufacturer · Pune, India</div>
+  <h1 class="hero-headline">
+    Where Ancient<br/>
+    Science Meets<br/>
+    <span class="hl">Modern Scale.</span>
+  </h1>
+  <p class="hero-sub">
+    NatureExpert Ayurvedic Pvt. Ltd. formulates, manufactures, and delivers skincare, haircare, and body care products — rooted in Ayurveda, built for today's brands.
+  </p>
+  <div class="hero-actions">
+    <a href="#contact" class="btn-primary">Start Your Brand →</a>
+    <a href="#facility" class="btn-outline">See Our Facility</a>
+  </div>
+  <div class="hero-stats">
+    <div>
+      <div class="hero-stat-num">40<span>+</span></div>
+      <div class="hero-stat-label">Years of formulation mastery</div>
+    </div>
+    <div>
+      <div class="hero-stat-num">3</div>
+      <div class="hero-stat-label">Product categories</div>
+    </div>
+    <div>
+      <div class="hero-stat-num">100<span>%</span></div>
+      <div class="hero-stat-label">Ayurvedic formulations</div>
+    </div>
+    <div>
+      <div class="hero-stat-num">1</div>
+      <div class="hero-stat-label">Ministry of Ayush license</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="diff-section" id="difference">
+  <div class="section-tag">Why NatureExpert</div>
+  <h2 class="section-heading">Not just another<br/>contract manufacturer.</h2>
+  <p class="section-body">
+    We don't just fill bottles. We build formulations that solve real problems — backed by decades of hands-on R&D and a license no one casually acquires.
+  </p>
+
+  <div class="diff-grid">
+    <div class="diff-card">
+      <div class="diff-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#AAFF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      </div>
+      <div class="diff-title">Ministry of Ayush License</div>
+      <div class="diff-text">One of a handful of manufacturers in India with an official Ayush license — giving your product regulatory credibility that competitors can't fake.</div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#AAFF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      </div>
+      <div class="diff-title">40+ Years In-House Expertise</div>
+      <div class="diff-text">Our formulation lead has spent four decades studying Ayurvedic herbs, actives, and carrier systems. This isn't outsourced R&D — it lives inside our walls.</div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#AAFF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+      </div>
+      <div class="diff-title">Full-Category Coverage</div>
+      <div class="diff-text">Skincare, haircare, body care — under one roof, one quality standard, one point of contact. No stitching together three different vendors.</div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#AAFF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+      </div>
+      <div class="diff-title">Private Label Ready</div>
+      <div class="diff-text">From formulation to finished, labelled product — we handle the entire chain so you can focus on building your brand, not managing supply.</div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#AAFF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3zM8 12h8M12 8v8"/></svg>
+      </div>
+      <div class="diff-title">Custom Formulation R&D</div>
+      <div class="diff-text">Have an idea but no formula? We collaborate to translate your brief into a unique, efficacious product — with Ayurvedic principles baked in from day one.</div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#AAFF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div class="diff-title">Quality You Can Certify</div>
+      <div class="diff-text">Rigorous in-house testing, documented batch records, and compliance-first processes — so you can market with confidence and sleep easy.</div>
+    </div>
+  </div>
+</section>
+
+<!-- MANUFACTURING GALLERY -->
+<section class="gallery-section" id="facility">
+  <div class="gallery-header">
+    <div>
+      <div class="section-tag">Our Facility</div>
+      <h2 class="section-heading">Built to produce.<br/>Designed to impress.</h2>
+    </div>
+    <p class="section-body" style="max-width: 360px; font-size: 15px;">
+      A fully equipped manufacturing unit that handles everything from raw material intake to finished goods dispatch.
+    </p>
+  </div>
+
+  <div class="gallery-grid" id="galleryGrid">
+    <div class="gallery-item large" onclick="triggerUpload(this)" title="Click to upload image">
+      <div class="gallery-placeholder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><circle cx="12" cy="13" r="3"/></svg>
+        <span>Production Floor</span>
+        <span style="font-size: 11px; opacity: 0.5">Click to upload photo</span>
+      </div>
+    </div>
+
+    <div class="gallery-item tall" onclick="triggerUpload(this)" title="Click to upload image">
+      <div class="gallery-placeholder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><circle cx="12" cy="13" r="3"/></svg>
+        <span>R&D Lab</span>
+        <span style="font-size: 11px; opacity: 0.5">Click to upload photo</span>
+      </div>
+    </div>
+
+    <div class="gallery-item wide" onclick="triggerUpload(this)" title="Click to upload image">
+      <div class="gallery-placeholder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><circle cx="12" cy="13" r="3"/></svg>
+        <span>Filling Line</span>
+        <span style="font-size: 11px; opacity: 0.5">Click to upload photo</span>
+      </div>
+    </div>
+
+    <div class="gallery-item small" onclick="triggerUpload(this)">
+      <div class="gallery-placeholder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><circle cx="12" cy="13" r="3"/></svg>
+        <span>Mixing Tanks</span>
+        <span style="font-size: 11px; opacity: 0.5">Upload photo</span>
+      </div>
+    </div>
+
+    <div class="gallery-item small" onclick="triggerUpload(this)">
+      <div class="gallery-placeholder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><circle cx="12" cy="13" r="3"/></svg>
+        <span>QC Testing</span>
+        <span style="font-size: 11px; opacity: 0.5">Upload photo</span>
+      </div>
+    </div>
+
+    <div class="gallery-item small" onclick="triggerUpload(this)">
+      <div class="gallery-placeholder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><circle cx="12" cy="13" r="3"/></svg>
+        <span>Packaging Area</span>
+        <span style="font-size: 11px; opacity: 0.5">Upload photo</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="gallery-upload-note">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+    Click any slot to upload your facility photos. Images are stored in your browser session.
+  </div>
+  <input type="file" id="imageUploadInput" accept="image/*" style="display:none" />
+</section>
+
+<!-- ABOUT -->
+<section class="about-section" id="about">
+  <div class="section-tag">Our Story</div>
+  <div class="about-grid">
+    <div class="about-photo" onclick="triggerFounderUpload()" title="Click to upload your photo">
+      <div class="about-photo-placeholder" id="founderPhotoPlaceholder">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.3"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span style="font-size: 13px; color: var(--muted);">Upload your photo</span>
+      </div>
+      <img id="founderPhoto" style="display:none; width:100%; height:100%; object-fit:cover;" />
+    </div>
+    <input type="file" id="founderPhotoInput" accept="image/*" style="display:none" />
+
+    <div class="about-content">
+      <h2 class="about-quote">
+        Four decades of formulating.<br/>
+        One unwavering belief:<br/>
+        <span class="hl">Ayurveda works.</span>
+      </h2>
+      <p class="about-text">
+        NatureExpert Ayurvedic Pvt. Ltd. was built on a foundation that most manufacturers don't have — a formulator who has spent 40+ years studying, testing, and refining Ayurvedic ingredients. Not as a trend, but as a science.
+      </p>
+      <p class="about-text">
+        Today, we are a fully licensed, full-stack Ayurvedic manufacturer serving brands across skincare, haircare, and body care. Our Ministry of Ayush license isn't just a certificate on the wall — it's proof that our processes, ingredients, and formulations meet the highest standards set by the Indian government for Ayurvedic products.
+      </p>
+      <p class="about-text">
+        If you're building a brand that wants to stand for something real, we're the manufacturing partner that makes that possible.
+      </p>
+      <div class="about-badges">
+        <span class="badge green">Ministry of Ayush</span>
+        <span class="badge green">ISO Certified</span>
+        <span class="badge">Skincare</span>
+        <span class="badge">Haircare</span>
+        <span class="badge">Body Care</span>
+        <span class="badge">Contract Mfg</span>
+        <span class="badge">Private Label</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LICENSES -->
+<section class="licenses-section" id="licenses">
+  <div class="section-tag">Certifications &amp; Licenses</div>
+  <h2 class="section-heading">Every certificate<br/>we've earned.</h2>
+  <p class="section-body">
+    Our licenses aren't checkboxes — they're proof of what we've built. View, download, or verify any document below.
+  </p>
+
+  <div class="licenses-grid" id="licensesGrid">
+    <!-- Default license placeholders — replace with real uploads -->
+    <a class="license-card" id="lcAyush" href="#" onclick="handleLicenseClick(event,'lcAyush')">
+      <div class="license-card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      </div>
+      <div>
+        <div class="license-name">Ministry of Ayush License</div>
+        <div class="license-issuer">Ministry of Ayush, Govt. of India</div>
+      </div>
+      <span class="license-tag">Ayurvedic Manufacturing</span>
+    </a>
+
+    <a class="license-card" id="lcGst" href="#" onclick="handleLicenseClick(event,'lcGst')">
+      <div class="license-card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      </div>
+      <div>
+        <div class="license-name">GST Registration</div>
+        <div class="license-issuer">Government of India</div>
+      </div>
+      <span class="license-tag">Tax Compliance</span>
+    </a>
+
+    <a class="license-card" id="lcIso" href="#" onclick="handleLicenseClick(event,'lcIso')">
+      <div class="license-card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div>
+        <div class="license-name">ISO Certificate</div>
+        <div class="license-issuer">ISO Certifying Body</div>
+      </div>
+      <span class="license-tag">Quality Management</span>
+    </a>
+
+    <a class="license-card" id="lcFssai" href="#" onclick="handleLicenseClick(event,'lcFssai')">
+      <div class="license-card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      </div>
+      <div>
+        <div class="license-name">Manufacturing License</div>
+        <div class="license-issuer">State Licensing Authority</div>
+      </div>
+      <span class="license-tag">Manufacturing</span>
+    </a>
+
+    <!-- Upload more -->
+    <div class="license-upload-area" onclick="triggerLicenseUpload()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+      <div class="license-upload-label">Upload a license or certificate</div>
+      <div style="font-size: 11px; color: var(--muted);">PDF, JPG, PNG supported</div>
+    </div>
+  </div>
+  <input type="file" id="licenseUploadInput" accept=".pdf,.jpg,.jpeg,.png" style="display:none" />
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="contact-grid">
+    <div class="contact-info">
+      <div class="section-tag">Get In Touch</div>
+      <h2 class="section-heading">Let's build<br/>your product.</h2>
+      <p class="section-body" style="margin-top: 16px;">
+        Whether you have a full brief or just a concept, we're ready to talk. Drop us a message and our team will respond within 24 hours.
+      </p>
+
+      <div class="contact-detail">
+        <div class="contact-item">
+          <div class="contact-item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="contact-item-label">Location</div>
+            <div class="contact-item-value">Pune, Maharashtra, India</div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <div class="contact-item-label">Email</div>
+            <div class="contact-item-value">info@natureexpertayurvedic.com</div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.5 11.13 19.79 19.79 0 011.5 2.5 2 2 0 013.48.5h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 8.1a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="contact-item-label">Phone</div>
+            <div class="contact-item-value">+91 XXXXX XXXXX</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" placeholder="Rajan" />
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" placeholder="Mehta" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="rajan@yourbrand.com" />
+        </div>
+
+        <div class="form-group">
+          <label for="company">Company / Brand Name</label>
+          <input type="text" id="company" placeholder="Your Brand Pvt. Ltd." />
+        </div>
+
+        <div class="form-group">
+          <label for="interest">I'm interested in</label>
+          <select id="interest">
+            <option value="">Select a service</option>
+            <option>Contract Manufacturing</option>
+            <option>Private Label</option>
+            <option>Custom Formulation R&D</option>
+            <option>Full Brand Build (Formulation + Manufacturing)</option>
+            <option>Just exploring — tell me more</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Describe your product idea, category, target quantities, and any specific requirements..."></textarea>
+        </div>
+
+        <div class="form-submit">
+          <button type="button" class="btn-primary" onclick="handleFormSubmit()" style="width:100%; justify-content:center;">
+            Send Message →
+          </button>
+        </div>
+      </div>
+      <div class="form-success" id="formSuccess">
+        ✓ Message sent! We'll get back to you within 24 hours.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-brand">NatureExpert <span>Ayurvedic</span> Pvt. Ltd.</div>
+    <div class="footer-copy" style="margin-top: 6px;">Ministry of Ayush Licensed · Pune, India</div>
+  </div>
+  <ul class="footer-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#difference">Why Us</a></li>
+    <li><a href="#facility">Facility</a></li>
+    <li><a href="#licenses">Licenses</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="footer-copy">© 2025 NatureExpert Ayurvedic Pvt. Ltd. All rights reserved.</div>
+</footer>
+
+<script>
+  // Mobile nav
+  const mobileToggle = document.getElementById('mobileToggle');
+  const navLinks = document.getElementById('navLinks');
+  mobileToggle.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    mobileToggle.textContent = open ? '✕' : '☰';
+  });
+  // Close nav when any link inside is tapped
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      mobileToggle.textContent = '☰';
+    });
+  });
+
+  // Gallery image upload
+  let currentGalleryItem = null;
+  function triggerUpload(el) {
+    currentGalleryItem = el;
+    document.getElementById('imageUploadInput').click();
+  }
+  document.getElementById('imageUploadInput').addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    if (!file || !currentGalleryItem) return;
+    const reader = new FileReader();
+    reader.onload = function(ev) {
+      currentGalleryItem.innerHTML = `<img src="${ev.target.result}" alt="Facility photo" />`;
+    };
+    reader.readAsDataURL(file);
+    this.value = '';
+  });
+
+  // Founder photo upload
+  function triggerFounderUpload() {
+    document.getElementById('founderPhotoInput').click();
+  }
+  document.getElementById('founderPhotoInput').addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(ev) {
+      document.getElementById('founderPhotoPlaceholder').style.display = 'none';
+      const img = document.getElementById('founderPhoto');
+      img.src = ev.target.result;
+      img.style.display = 'block';
+    };
+    reader.readAsDataURL(file);
+    this.value = '';
+  });
+
+  // License file upload/link
+  const licenseFiles = {};
+  function handleLicenseClick(e, cardId) {
+    e.preventDefault();
+    if (licenseFiles[cardId]) {
+      window.open(licenseFiles[cardId], '_blank');
+    } else {
+      document.getElementById('licenseUploadInput')._targetCard = cardId;
+      document.getElementById('licenseUploadInput').click();
+    }
+  }
+
+  function triggerLicenseUpload() {
+    document.getElementById('licenseUploadInput')._targetCard = null;
+    document.getElementById('licenseUploadInput').click();
+  }
+
+  document.getElementById('licenseUploadInput').addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    const targetCard = this._targetCard;
+    reader.onload = function(ev) {
+      if (targetCard) {
+        licenseFiles[targetCard] = ev.target.result;
+        const card = document.getElementById(targetCard);
+        const tag = card.querySelector('.license-tag');
+        if (tag) tag.textContent = '✓ Document uploaded';
+        card.style.borderColor = 'var(--acid-mid)';
+      } else {
+        // Add a new card
+        const id = 'lc_' + Date.now();
+        licenseFiles[id] = ev.target.result;
+        const card = document.createElement('a');
+        card.className = 'license-card';
+        card.id = id;
+        card.href = '#';
+        card.setAttribute('onclick', `handleLicenseClick(event,'${id}')`);
+        card.innerHTML = `
+          <div class="license-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <div>
+            <div class="license-name">${file.name.replace(/\.[^.]+$/, '')}</div>
+            <div class="license-issuer">Uploaded document</div>
+          </div>
+          <span class="license-tag">✓ Uploaded</span>
+        `;
+        const grid = document.getElementById('licensesGrid');
+        const uploadBtn = grid.querySelector('.license-upload-area');
+        grid.insertBefore(card, uploadBtn);
+      }
+    };
+    reader.readAsDataURL(file);
+    this.value = '';
+  });
+
+  // Contact form
+  function handleFormSubmit() {
+    const fname = document.getElementById('fname').value.trim();
+    const email = document.getElementById('email').value.trim();
+    if (!fname || !email) {
+      alert('Please fill in your name and email.');
+      return;
+    }
+    document.getElementById('contactForm').style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  }
+
+  // Smooth scroll offset for fixed nav
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const top = target.getBoundingClientRect().top + window.scrollY - 72;
+        window.scrollTo({ top, behavior: 'smooth' });
+        navLinks.classList.remove('open');
+        mobileToggle.textContent = '☰';
+      }
+    });
+  });
+</script>
+</body>
+</html>
