@@ -1,6 +1,5 @@
-import "dotenv/config";
-import nodemailer from "nodemailer";
 import type { Route } from "./+types/contact";
+import { ContactEmailNotConfiguredError, sendContactEmail } from "../utils/sendContactEmail.server";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -24,48 +23,16 @@ export async function action({ request }: Route.ActionArgs) {
     return Response.json({ ok: false, error: "Please enter a valid email address." }, { status: 400 });
   }
 
-  const { SMTP_HOST, SMTP_PORT, SMTP_SECURE, SMTP_USER, SMTP_PASS, SMTP_FROM, CONTACT_TO_EMAIL } =
-    process.env;
-
-  if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS) {
-    console.error("SMTP is not configured — missing SMTP_HOST/SMTP_USER/SMTP_PASS env vars.");
-    return Response.json(
-      { ok: false, error: "Email sending is not configured yet. Please try again later." },
-      { status: 500 }
-    );
-  }
-
-  const transporter = nodemailer.createTransport({
-    host: SMTP_HOST,
-    port: Number(SMTP_PORT) || 587,
-    secure: SMTP_SECURE === "true",
-    auth: { user: SMTP_USER, pass: SMTP_PASS },
-  });
-
-  const fullName = [firstName, lastName].filter(Boolean).join(" ");
-  const subject = `New enquiry from ${fullName}${company ? ` — ${company}` : ""}`;
-  const text = [
-    `Name: ${fullName}`,
-    `Email: ${email}`,
-    company ? `Company: ${company}` : null,
-    interest ? `Interested in: ${interest}` : null,
-    "",
-    "Message:",
-    message || "(no message provided)",
-  ]
-    .filter((line) => line !== null)
-    .join("\n");
-
   try {
-    await transporter.sendMail({
-      from: `"NatureExpert Website" <${SMTP_FROM || SMTP_USER}>`,
-      to: CONTACT_TO_EMAIL || SMTP_USER,
-      replyTo: email,
-      subject,
-      text,
-    });
+    await sendContactEmail({ firstName, lastName, email, company, interest, message });
     return Response.json({ ok: true });
   } catch (error) {
+    if (error instanceof ContactEmailNotConfiguredError) {
+      return Response.json(
+        { ok: false, error: "Email sending is not configured yet. Please try again later." },
+        { status: 500 }
+      );
+    }
     console.error("Failed to send contact email", error);
     return Response.json(
       { ok: false, error: "Something went wrong sending your message. Please try again later." },
