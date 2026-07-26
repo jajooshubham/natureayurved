@@ -2,3 +2,20 @@
 build
 node_modules
 README.md
+
+# Secrets — never bake these into an image layer
+.env
+.env.*
+!.env.example
+
+# VCS / editor / OS cruft
+.git
+.gitignore
+.DS_Store
+.agents
+
+# Not needed at runtime
+index_4.html
+Dockerfile
+.dockerignore
+docker-compose.yml
